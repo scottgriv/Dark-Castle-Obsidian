@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Root element -->
+<kingdom>
+    <!-- In a land shrouded in mystery... -->
+
+    <!-- Comment: This is a list of castles -->
+    <castles>
+        <castle id="1">
+            <name>Moonshadow Fortress</name>
+            <construction_year>980</construction_year>
+            <destruction_year>1503</destruction_year>
+            <features>
+                <feature>Eerie Glow</feature>
+                <feature>High Battlements</feature>
+            </features>
+            <is_mystical>true</is_mystical>
+        </castle>
+        <castle id="2">
+            <name>Starfall Keep</name>
+            <construction_year>1100</construction_year>
+            <destruction_year>1678</destruction_year>
+            <features>
+                <feature>Mystical Lights</feature>
+                <feature>Ancient Walls</feature>
+            </features>
+            <is_mystical>false</is_mystical>
+        </castle>
+        <castle id="3">
+            <name>Whispering Grove Keep</name>
+            <construction_year>1050</construction_year>
+            <destruction_year>1630</destruction_year>
+            <features>
+                <feature>Whispering Trees</feature>
+                <feature>Hidden Passages</feature>
+            </features>
+            <is_mystical>true</is_mystical>
+        </castle>
+    </castles>
+    
+    <!-- ...there stood a Dark Castle -->
+
+    <!-- Comment: This is a list of lords -->
+    <lords>
+        <lord id="1">
+            <name>Lord Michael Johnson</name>
+            <email>michael.johnson@castlekingdom.com</email>
+            <reign_start>980</reign_start>
+            <reign_end>1000</reign_end>
+            <title>Baron</title>
+        </lord>
+        <lord id="2">
+            <name>Lady Emily Davis</name>
+            <email>emily.davis@castlekingdom.com</email>
+            <reign_start>1100</reign_start>
+            <reign_end>1150</reign_end>
+            <title>Duchess</title>
+        </lord>
+    </lords>
+    
+    <!-- Nested elements -->
+    <events>
+        <event id="1">
+            <name>Castle Tour</name>
+            <date>2024-06-20</date>
+            <location>
+                <address>123 Castle Street</address>
+                <city>Castle Town</city>
+                <state>Kingdomshire</state>
+                <zip>12345</zip>
+            </location>
+        </event>
+        <event id="2">
+            <name>Medieval Festival</name>
+            <date>2024-07-15</date>
+            <location>
+                <address>456 Knight Avenue</address>
+                <city>Fortress City</city>
+                <state>Realmia</state>
+                <zip>67890</zip>
+            </location>
+        </event>
+    </events>
+</kingdom>

@@ -1,0 +1,41 @@
+name: Dark Castle CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+
+    steps:
+      - name: Checkout Dark Castle repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js ${{ matrix.node-version }} for Dark Castle
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dark Castle dependencies
+        run: npm install
+
+      - name: Run Dark Castle tests
+        run: npm test
+
+      - name: Run Dark Castle Coveralls
+        if: success()
+        run: npm run coveralls
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always

@@ -1,0 +1,101 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-console": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ]
+  },
+  "Castles": [
+    {
+      "name": "Moonshadow Fortress",
+      "constructionYear": 980,
+      "destructionYear": 1503,
+      "features": ["Eerie Glow", "High Battlements"],
+      "isMystical": true
+    },
+    {
+      "name": "Starfall Keep",
+      "constructionYear": 1100,
+      "destructionYear": 1678,
+      "features": ["Mystical Lights", "Ancient Walls"],
+      "isMystical": false
+    },
+    {
+      "name": "Whispering Grove Keep",
+      "constructionYear": 1050,
+      "destructionYear": 1630,
+      "features": ["Whispering Trees", "Hidden Passages"],
+      "isMystical": true
+    }
+  ]
+}
