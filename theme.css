@@ -141,6 +141,19 @@ body:is(.theme-dark) {
   --text-selection: var(--dark-castle-accent-hover);
   --text-highlight-bg: var(--dark-castle-palette-dark-gray);
 }
+
+body.theme-dark .setting-item, 
+body.theme-dark .setting-item .setting-item-control {
+  border-color: var(--dark-castle-palette-dark-blue) !important; /* Change this to your desired border color */
+}
+
+body.theme-dark .modal,
+body.theme-dark .prompt {
+  border-color: var(--dark-castle-palette-light-gray) !important; /* Change this to your desired border color */
+  border-width: 1px; /* You can adjust the width as needed */
+  border-style: solid; /* You can change the border style if needed */
+}
+
 body:where(.theme-dark) {
   --icon-stroke: 2px;
   --icon-color-active: var(--interactive-accent);
