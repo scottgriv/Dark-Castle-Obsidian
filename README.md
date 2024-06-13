@@ -9,7 +9,7 @@
     </a>
 </h1>
 <p align="center">
-  A sophisticated and elegant dark theme available for multiple platforms. Inspired by the timeless beauty and mystery of medieval castles, this theme combines rich, deep colors with a clean and modern design.
+  A vibrantly elegant dark theme available for multiple platforms. Inspired by the timeless beauty and mystery of medieval castles, this theme combines rich, deep colors with a clean and modern design.
 </p>
 
 ![Screenshot](./screenshot.png)
