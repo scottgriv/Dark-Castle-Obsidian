@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "minAppVersion": "1.0.0",
     "author": "scottgriv",
-    "fundingUrl": "https://buymeacoffee.com/scottgriv",
-    "authorUrl": "https://github.com/scottgriv"
+    "authorUrl": "https://github.com/scottgriv",
+    "fundingUrl": {
+        "Buy Me a Coffee": "https://buymeacoffee.com/scottgriv",
+        "GitHub Sponsor": "https://github.com/sponsors/scottgriv"
+    }
 }
