@@ -14,7 +14,9 @@ Download using the [GitHub .zip download](https://github.com/scottgriv/Dark-Cast
 
 ### Activating the Theme
 
-TODO
-1. Turn on 'Custom CSS' plugin in Obsidian: `Settings > Plugins > Custom CSS.`
-2. Download and copy the `theme.css` file to the root folder of your Obsidian vault. It should take effect immediately.
-3. Boom! It's working
+1. Open `Settings` (Bottom Right)
+2. Select `Appearance`
+3. Under `Appearance → Themes`, select `Manage`
+4. Search for `Dark Castle`
+5. Click on it
+6. Click `Install and use`
