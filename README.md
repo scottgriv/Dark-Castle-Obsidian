@@ -12,7 +12,7 @@
   A vibrantly elegant dark theme available for multiple platforms. Inspired by the timeless beauty and mystery of medieval castles, this theme combines rich, deep colors with a clean and modern design.
 </p>
 
-![Screenshot](./screenshot_large.png)
+![Screenshot](./screenshot.png)
 
 ## Install
 
