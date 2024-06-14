@@ -1,7 +1,7 @@
 /* Dark Castle Theme */
 
 body.theme-dark {
-  /* Color Palette */
+  /* Full Color Palette */
   /* Note: Not all colors are being used */
   --dark-castle-palette-black: #000000;
   --dark-castle-palette-black-02: #1A1A1A;
@@ -144,14 +144,14 @@ body:is(.theme-dark) {
 
 body.theme-dark .setting-item, 
 body.theme-dark .setting-item .setting-item-control {
-  border-color: var(--dark-castle-palette-dark-blue) !important;
+  border-color: var(--dark-castle-palette-dark-blue) !important; /* Change this to your desired border color */
 }
 
 body.theme-dark .modal,
 body.theme-dark .prompt {
-  border-color: var(--dark-castle-palette-light-gray) !important;
-  border-width: 1px;
-  border-style: solid;
+  border-color: var(--dark-castle-palette-light-gray) !important; /* Change this to your desired border color */
+  border-width: 1px; /* You can adjust the width as needed */
+  border-style: solid; /* You can change the border style if needed */
 }
 
 body:where(.theme-dark) {
@@ -245,7 +245,6 @@ body:where(.theme-dark) {
   --code-tag: var(--dark-castle-palette-light-blue);
   --code-value: var(--dark-castle-palette-white);
 }
-
 /* html tags in editor */
 /*
 .cm-tag
@@ -439,10 +438,10 @@ body:is(.theme-dark):not(.no-fix-text-input-selection) textarea::selection {
   background-color: var(--dark-castle-palette-dark-gray-04-mix);
 }
 body.theme-dark:not(.no-fix-toggle-readability) .checkbox-container {
-  background-color: var(--dark-castle-palette-light-green);
+  background-color: var(--dark-castle-palette-light-red);
 }
 body.theme-dark:not(.no-fix-toggle-readability) .checkbox-container.is-enabled {
-  background-color: var(--dark-castle-palette-light-red);
+  background-color: var(--dark-castle-palette-light-green);
 }
 body:is(.theme-dark):not(.no-fix-unresolved-markdown-links-hover)
   h3[data-heading*="find section #"]
