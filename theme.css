@@ -144,12 +144,12 @@ body:is(.theme-dark) {
 
 body.theme-dark .setting-item, 
 body.theme-dark .setting-item .setting-item-control {
-  border-color: var(--dark-castle-palette-dark-blue) !important; /* Change this to your desired border color */
+  border-color: var(--dark-castle-palette-dark-blue); /* Change this to your desired border color */
 }
 
 body.theme-dark .modal,
 body.theme-dark .prompt {
-  border-color: var(--dark-castle-palette-light-gray) !important; /* Change this to your desired border color */
+  border-color: var(--dark-castle-palette-light-gray); /* Change this to your desired border color */
   border-width: 1px; /* You can adjust the width as needed */
   border-style: solid; /* You can change the border style if needed */
 }
@@ -245,13 +245,6 @@ body:where(.theme-dark) {
   --code-tag: var(--dark-castle-palette-light-blue);
   --code-value: var(--dark-castle-palette-white);
 }
-/* html tags in editor */
-/*
-.cm-tag
-{
-  color: var(--text-accent) !important;
-}
-*/
 
 body:where(.theme-dark) {
   --file-line-width: 50rem;
@@ -657,7 +650,7 @@ body.theme-dark.highlightr-lowlight
     rgba(var(--mono-rgb-0), 0) 10%,
     rgba(var(--mono-rgb-0), 0) 25%,
     var(--lowlight-background) 40%
-  ) !important;
+  );
 }
 body.theme-dark.highlightr-floating
   mark[class*="hltr"]:last-of-type:not(mark[class*="hltr"]:only-of-type) {
@@ -668,7 +661,7 @@ body.theme-dark.highlightr-floating
     0,
     rgba(var(--mono-rgb-0), 0) var(--floating-size),
     var(--floating-background) var(--floating-size)
-  ) !important;
+  );
 }
 body:is(.theme-dark) .markdown-source-view:is(.is-live-preview) mark {
   color: var(--text-normal);
