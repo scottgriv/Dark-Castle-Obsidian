@@ -22,3 +22,8 @@
 7. Under the **Themes** section, click on the dropdown menu next to **Theme** heading
 8. Select `Dark Castle` and then you're done! 🎉
     - If you do not see it, restart Obsidian and try looking for it again on the dropdown menu
+
+###### Note
+
+- Inside **Settings → Appearances**, under `Base color scheme`, ensure **Dark** is selected; you can then view or search for **Dark Castle** under `Manage`.
+- If you have **Adapt to system** selected, ensure your device is using **Dark Mode**, or else you will not find the theme since its a **Dark** only theme.
