@@ -6,6 +6,7 @@ body.theme-dark {
   --dark-castle-palette-black: #000000;
   --dark-castle-palette-black-02: #1A1A1A;
   --dark-castle-palette-dark-gray: #292929;
+  --dark-castle-palette-dark-gray-02: #333333;
   --dark-castle-palette-gray: #575757;
   --dark-castle-palette-light-gray: #9C9C9C;
   --dark-castle-palette-white: #FFFFFF;
@@ -68,7 +69,7 @@ body.theme-dark {
   );
   --dark-castle-text-normal: var(--dark-castle-palette-light-gray);
   /*--dark-castle-text-muted: #8695b799;*/
-  --dark-castle-accent-hover: var(--dark-castle-palette-light-yellow); /* Hover Accent */
+  --dark-castle-accent-hover: var(--dark-castle-palette-gray); /* Hover Accent */
   --dark-castle-palette-light-blue-hover: color-mix(
     in hsl shorter hue,
     var(--dark-castle-palette-light-blue),
