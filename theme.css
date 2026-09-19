@@ -737,3 +737,399 @@ body:is(.theme-dark)
   color: var(--dark-castle-accent);
   background-color: var(--dark-castle-palette-black);
 }
+
+/* ============================================================
+   DARK CASTLE — PDF EXPORT
+   Preserves Dark Castle styling when using File > Export to PDF
+   ============================================================ */
+
+@media print {
+
+  /* ----------------------------------------------------------
+     Remove white PDF page margins
+     ---------------------------------------------------------- */
+
+  @page {
+    margin: 0;
+    background: #000000;
+  }
+
+
+  /* ----------------------------------------------------------
+     Dark Castle print palette
+     Defined here because Obsidian PDF export may not retain
+     body.theme-dark.
+     ---------------------------------------------------------- */
+
+  .print,
+  .print .markdown-preview-view,
+  .print .markdown-rendered {
+    --dark-castle-print-black: #000000;
+    --dark-castle-print-dark-gray: #292929;
+    --dark-castle-print-gray: #575757;
+    --dark-castle-print-light-gray: #9C9C9C;
+    --dark-castle-print-white: #FFFFFF;
+
+    --dark-castle-print-red: #FF000F;
+    --dark-castle-print-orange: #FF8040;
+    --dark-castle-print-yellow: #FFD580;
+    --dark-castle-print-green: #BAE67E;
+    --dark-castle-print-blue: #4DBCED;
+    --dark-castle-print-purple: #9354FF;
+    --dark-castle-print-dark-purple: #AA1B86;
+    --dark-castle-print-dark-teal: #007B88;
+
+    /* Core Obsidian variables */
+    --background-primary: var(--dark-castle-print-black);
+    --background-primary-alt: var(--dark-castle-print-dark-gray);
+    --background-secondary: var(--dark-castle-print-black);
+    --background-secondary-alt: var(--dark-castle-print-black);
+
+    --text-normal: var(--dark-castle-print-yellow);
+    --text-muted: var(--dark-castle-print-light-gray);
+    --text-faint: var(--dark-castle-print-orange);
+
+    --text-accent: var(--dark-castle-print-orange);
+    --text-accent-hover: var(--dark-castle-print-blue);
+
+    --bold-color: var(--dark-castle-print-blue);
+    --italic-color: var(--dark-castle-print-blue);
+    --strikethrough-color: var(--dark-castle-print-blue);
+
+    /* Headings */
+    --h1-color: var(--dark-castle-print-green);
+    --h2-color: var(--dark-castle-print-red);
+    --h3-color: var(--dark-castle-print-red);
+    --h4-color: var(--dark-castle-print-red);
+    --h5-color: var(--dark-castle-print-red);
+    --h6-color: var(--dark-castle-print-red);
+
+    /* Links */
+    --link-color: var(--dark-castle-print-orange);
+    --link-color-hover: var(--dark-castle-print-blue);
+    --link-external-color: var(--dark-castle-print-orange);
+    --link-unresolved-color: var(--dark-castle-print-orange);
+
+    /* Code */
+    --code-background: #1A1A1A;
+    --code-normal: #08D220;
+    --code-comment: #0D8501;
+    --code-function: #FF5503;
+    --code-keyword: #AA1B86;
+    --code-operator: var(--dark-castle-print-orange);
+    --code-punctuation: var(--dark-castle-print-orange);
+    --code-string: var(--dark-castle-print-red);
+    --code-tag: var(--dark-castle-print-blue);
+    --code-value: var(--dark-castle-print-white);
+
+    /* Blockquote */
+    --blockquote-color: var(--dark-castle-print-dark-purple);
+
+    /* Tables */
+    --table-background: var(--dark-castle-print-black);
+    --table-border-color: var(--dark-castle-print-dark-gray);
+    --table-header-border-color: var(--dark-castle-print-dark-gray);
+
+    /* Tags */
+    --tag-color: var(--dark-castle-print-white);
+    --tag-background: var(--dark-castle-print-dark-teal);
+
+    /* Horizontal rules */
+    --hr-color: #2D449B;
+
+    color: var(--dark-castle-print-yellow) !important;
+    background-color: var(--dark-castle-print-black) !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Entire PDF background
+     ---------------------------------------------------------- */
+
+  html,
+  body,
+  .print,
+  .print .markdown-preview-view,
+  .print .markdown-rendered,
+  .print .markdown-preview-section {
+    margin: 0 !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Internal page padding
+
+     @page margin is intentionally 0 so the PDF background
+     reaches the very edge. This padding recreates a readable
+     margin while keeping it black.
+     ---------------------------------------------------------- */
+
+  .print .markdown-preview-sizer {
+    box-sizing: border-box !important;
+
+    margin: 0 !important;
+
+    padding-top: 0.5in !important;
+    padding-right: 0.5in !important;
+    padding-bottom: 0.5in !important;
+    padding-left: 0.5in !important;
+
+    background: #000000 !important;
+    background-color: #000000 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Normal text
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered,
+  .print .markdown-rendered p,
+  .print .markdown-rendered li {
+    color: #FFD580 !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Headings — match Dark Castle
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered h1 {
+    color: #BAE67E !important;
+    font-weight: 700;
+  }
+
+  .print .markdown-rendered h2 {
+    color: #FF000F !important;
+    font-weight: 675;
+  }
+
+  .print .markdown-rendered h3 {
+    color: #FF000F !important;
+    font-weight: 650;
+  }
+
+  .print .markdown-rendered h4 {
+    color: #FF000F !important;
+    font-weight: 625;
+  }
+
+  .print .markdown-rendered h5 {
+    color: #FF000F !important;
+    font-weight: 600;
+  }
+
+  .print .markdown-rendered h6 {
+    color: #FF000F !important;
+    font-weight: 575;
+  }
+
+
+  /* ----------------------------------------------------------
+     Bold / Italic / Strikethrough
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered strong,
+  .print .markdown-rendered b {
+    color: #4DBCED !important;
+  }
+
+  .print .markdown-rendered em,
+  .print .markdown-rendered i {
+    color: #4DBCED !important;
+  }
+
+  .print .markdown-rendered del,
+  .print .markdown-rendered s {
+    color: #4DBCED !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Links
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered a,
+  .print .markdown-rendered .internal-link,
+  .print .markdown-rendered .external-link {
+    color: #FF8040 !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Inline code
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered code:not(pre code) {
+    color: #08D220 !important;
+    background-color: #1A1A1A !important;
+    border: 1px solid #575757 !important;
+    border-radius: 4px;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Code blocks
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered pre {
+    background-color: #1A1A1A !important;
+    border: 1px solid #292929 !important;
+    color: #08D220 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print .markdown-rendered pre code {
+    background-color: transparent !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Blockquotes
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered blockquote {
+    color: #9354FF !important;
+    border-color: #AA1B86 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Horizontal rule
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered hr {
+    border-color: #2D449B !important;
+    color: #2D449B !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Tables
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered table {
+    width: 100%;
+    background-color: #000000 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print .markdown-rendered th,
+  .print .markdown-rendered td {
+    color: #FFD580 !important;
+    background-color: #000000 !important;
+    border: 1px solid #292929 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print .markdown-rendered th {
+    color: #4DBCED !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Tags
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered a.tag {
+    color: #FFFFFF !important;
+    background-color: #007B88 !important;
+    text-decoration: none !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Highlights
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered mark {
+    color: #FFD580 !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Callouts
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered .callout {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Images
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered img {
+    max-width: 100%;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Checkboxes
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered input[type="checkbox"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     List markers
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered li::marker {
+    color: #007B88 !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Avoid ugly page breaks where possible
+     ---------------------------------------------------------- */
+
+  .print .markdown-rendered pre,
+  .print .markdown-rendered blockquote,
+  .print .markdown-rendered table,
+  .print .markdown-rendered .callout,
+  .print .markdown-rendered img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
