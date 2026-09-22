@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-09-22
+
+### Changed
+
+- Checkbox color to purple.
+- Table header color to purple.
+
+### Fixed
+
+- Callout editor/export discrepancies.
+
+## Added
+
+- Added styling to PDF exports.
+
 ## [1.1.1] - 2026-09-18
 
 ## Added
@@ -67,6 +82,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Official release of **Dark Castle Theme for Obsidian**.
 
+[1.2.0]: https://github.com/scottgriv/Dark-Castle-Obsidian/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/scottgriv/Dark-Castle-Obsidian/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/scottgriv/Dark-Castle-Obsidian/compare/v1.0.7...v1.1.0
 [1.0.7]: https://github.com/scottgriv/Dark-Castle-Obsidian/compare/v1.0.6...v1.0.7
